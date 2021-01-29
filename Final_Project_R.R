@@ -46,12 +46,12 @@ data1$clv<-ifelse(data1$clv> bench ,(data1$clv == bench),(data1$clv<-data1$clv))
 
 #Missing values Identification and Treatment
 
-as.data.frame(colSums(is.na(data3)))
+as.data.frame(colSums(is.na(data1)))
 
 #Dropping the redundant variables from the data frame
 
-as.data.frame(colnames(data3))
-data4=select(data3,-c(Customer,State,Effective.To.Date))
+as.data.frame(colnames(data1))
+data4=select(data1,-c(Customer,State,Effective.To.Date))
 
 str(data4)#final dataset for modelling
 
